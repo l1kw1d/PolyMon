@@ -1,6 +1,6 @@
 ## Introduction 
 
-PolyLogyx Monitoring Agent (PolyMon) is a Windows software that leverages the osquery tool and the PolyLogyx Extension to osquery, to provide a view into detailed information about process creations, network connections, file system changes and many other activities on the system. For a detailed list of activities captured [check here](https://github.com/polylogyx/osq-ext-bin)
+PolyLogyx Monitoring Agent (PolyMon) is a Windows software that leverages the [osquery](https://osquery.io/) tool and the PolyLogyx Extension to osquery, to provide a view into detailed information about process creations, network connections, file system changes and many other activities on the system. For a detailed list of activities captured [check here](https://github.com/polylogyx/osq-ext-bin)
 
 The software can be used for various threat monitoring and forensic purposes on a standalone system and does not mandate burden of having a server to manage the agents. It provides a graphical user interface that allows a user to navigate through the activities and events happening on the endpoint device.
 
@@ -22,10 +22,20 @@ The tool can be provisioned with an optional [VirusTotal](https://www.virustotal
 
 At the end of the installation, the monitoring agent registers as a tray app and gets launched. Later you can close the tool window (it will keep running as tray app) or maximize the tool window by clicking on tray icon.
 
-![Installation_4](../Images/install-complete.png)
+![Installation_4](Images/install-complete.png)
 
-![Installation_5](../Images/tray-icon.png)
+![Installation_5](Images/tray-icon.png)
 
+
+## Configuration
+
+PolyMon is built with a default set of configurations for the underlying osquery agent as well as the [PolyLogyx Extension](https://github.com/polylogyx/osq-ext-bin). This provides an extremely low touch experience for the end user. The advanced users who wish to view/edit the configuration can do so by launching the PolyMon's front end application as shown below.
+
+![Configuration](Images/mon-config.png)
+
+PolyMon configuration follows the similar syntax as provided for PolyLogyx Extension and osquery. 
+
+![Configuration2](Images/mon-config2.png)
 
 
 
