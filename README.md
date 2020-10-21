@@ -55,6 +55,56 @@ If the tool was provisioned with VirusTotal key, it would look up the reputation
 
 ![TrayNotification](Images/tray-notif.png)
 
+The alert notifications can be turned off (or on) from the menu in the tray app. A global search option allows to look for a particular files hash as collected by the PolyMon agent. 
 
+![TrayNotificationConfig](Images/tray-notif-manage.png)
 
+Please keep in the mind that PolyMon DOES NOT index the entire disk. File hashes for only those file events as configured in the 'Configuration' are captured in the PolyMon. For file hashes of already resident files, the 'query' option as shown in the next section can be utilized. 
 
+# Front-end for osquery 
+
+For the advanced osquery users, the tool can act as graphical front end (much like the osqueyi shell) and can be used to send custom SQL queries on various osquery tables. 
+
+![TrayNotification](Images/mon-osquery2.png)
+
+# Endpoint Profiling 
+
+A combination of osquery queries are clubbed together to generate an endpoint profile. These queries are listed below: 
+
+![EProfile](Images/mon-profile1.png)
+
+The generated endpoint profile can be viewed as the HTML document.
+
+![EProfileOut](Images/mon-profile-htm.png)
+
+## Uninstalling PolyMon
+
+PolyMon can be uninstalled by removing the software from 'Programs and Features' or "Add/Remove" menu of the Windows control panel. 
+
+![Uninstall](Images/unistnall-1.png)
+
+![Uninstall2](Images/unistnall-2.png)
+
+![Uninstall3](Images/unistnall-3.png)
+
+## FAQ 
+
+Q: What is the osquery version bundled with PolyMon 
+
+Ans: The current release of PolyMon is bundled with osquery version 4.0.2 
+
+Q. What is the version of PolyLogyx Extension bundled with PolyMon 
+
+Ans: The current release of PolyMon is bundled with PolyLogyx Extension version 1.0.40.3 
+
+Q. Can PolyMon be deployed, and monitored, through a central server? 
+
+Ans: No. PolyMon is meant for a single computer usage. For getting the same functionality across a fleet of endpoints to be managed centrally, use PolyLogyx ESP. 
+
+Q. Can PolyMon co-exist with osquery agent installed via other mechanism? 
+
+Ans: It can, as long as the other osquery agent is not using PolyLogy Extension at the same time. 
+
+Q. What is the license for using, or distributing, PolyMon. 
+
+Ans. PolyMon is a freeware but licensed. All rights belong to EclecticIQ B.V. Please refer to the License file in the repository for detailed criteria. 
