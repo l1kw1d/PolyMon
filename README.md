@@ -85,7 +85,7 @@ PolyMon can be uninstalled by removing the software from 'Programs and Features'
 
 ![Uninstall2](Images/unistnall-2.png)
 
-![Uninstall3](Images/unistnall-3.png)
+![Uninstall3](Images/uninstall-3.png)
 
 ## FAQ 
 
