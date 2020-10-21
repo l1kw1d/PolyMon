@@ -37,5 +37,24 @@ PolyMon configuration follows the similar syntax as provided for PolyLogyx Exten
 
 ![Configuration2](Images/mon-config2.png)
 
+## Use cases 
+
+PolyMon tool can be used for a variety of use cases.
+
+# Detection and monitoring
+
+Under the hood, the PolyMon tool leverages a combination of technologies to record, query and display these activities. The most important use case is to provide a view into the activities of your system that are often not visible to naked eyes. These activities provide interesting insights for a system which can be used to root cause issues like a system breach, application misbehavior or any other unwarranted activity. Additionally, the tool can be utilized to query the properties of an endpoint. Each type of activity (or endpoint property) is provided under a tab that describes the type of activity. Each tab is a wrapper on a table provided by osquery core agent or PolyLogyx Extension. The default tabs are the 'activity monitoring' tabs. These activities include "File Events", "Process Events", "DNS Lookup", "HTTP Events" among others. The "search" box and the options on the right pane can assist with filtering the data for customizing the views.
+
+![ProcEvents](Images/proc-events.png)
+
+![DnsEvents](Images/dns-events.png)
+
+If the tool was provisioned with VirusTotal key, it would look up the reputation of file hashes from VirusTotal database, maintaining a rate quota associated with free API keys, and trigger an alert on a match found. 
+
+![FileEventsVt](Images/mon-data-vt-red.png)
+
+![TrayNotification](Images/tray-notif.png)
+
+
 
 
