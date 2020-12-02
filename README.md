@@ -26,6 +26,7 @@ At the end of the installation, the monitoring agent registers as a tray app and
 
 ![Installation_5](Images/tray-icon.png)
 
+![Installation_6](Images/options_about.png)
 
 ## Configuration
 
@@ -104,6 +105,14 @@ Ans: No. PolyMon is meant for a single computer usage. For getting the same func
 Q. Can PolyMon co-exist with osquery agent installed via other mechanism? 
 
 Ans: It can, as long as the other osquery agent is not using PolyLogy Extension at the same time. 
+
+Q. I only see some tabs filled with data while others are empty. Why?
+
+Ans: The tool auto-populates the data for some event types (File, Process, Socket, DNS, DNS Response, SSL and Image Load). For other event tabs, the data is fetched by the push of "Refresh" button.
+
+Q. Sometimes the UI hangs or shows 'Not responding'. Why?
+
+Ans: This can happen if the query triggered is computing high volume of data. Waiting for a few seconds will resolve the issue.
 
 Q. What is the license for using, or distributing, PolyMon. 
 
