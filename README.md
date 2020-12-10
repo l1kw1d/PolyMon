@@ -96,7 +96,7 @@ Ans: The current release of PolyMon is bundled with osquery version 4.0.2
 
 Q. What is the version of PolyLogyx Extension bundled with PolyMon 
 
-Ans: The current release of PolyMon is bundled with PolyLogyx Extension version 1.0.40.3 
+Ans: The current release of PolyMon is bundled with PolyLogyx Extension version 1.0.40.4
 
 Q. Can PolyMon be deployed, and monitored, through a central server? 
 
