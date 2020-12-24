@@ -118,7 +118,7 @@ Q. Can the tool work with a commercial VirusTotal API?
 
 Ans: It can but the tool would still maintain the lookup rate of a free API (i.e. 4 per minute).
 
-Q. Who is the publisher/owner of the tool? PolyLogyx of EclecticIQ?
+Q. Who is the publisher/owner of the tool? PolyLogyx or EclecticIQ?
 
 Ans: PolyLogyx (and all its technology products) are part of EclecticIQ. 
 
@@ -126,6 +126,6 @@ Q. I have a feature request (or a bug to report). How do I do so?
 
 Ans: Easiest way would be to create an issue on github.
 
-Q. What is the license for using, or distributing, PolyMon. 
+Q. What is the license for using, or distributing, PolyMon?
 
 Ans. PolyMon is a freeware but licensed. All rights belong to EclecticIQ B.V. Please refer to the License file in the repository for detailed criteria. 
