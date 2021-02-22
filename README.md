@@ -132,6 +132,8 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ## New tables added in osquery 4.5.0 added in dropdown list for "Other Tables"
 
+![OsqueryTableExample](Images/osquery-table.png)
+
    All tables recently added by osquery (supported only on Windows) in 4.5.0 version have been updated in the list. 
 
 ## Endpoint Profile report enriched with host encryption and security status. 
