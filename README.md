@@ -116,15 +116,15 @@ The generated endpoint profile can be viewed as the HTML document.
    You can double click any saved query and copy it to run again in future.
 
 ## Ability to export results in list view (csv format) with VirusTotal url links for hashes, domains, IPs. 
-	
-	Any list view can be exported into a csv formatted data for further analysis.
-	VirusTotal url links will also be exported for columns having hashes, domains or IPs.
+
+   Any list view can be exported into a csv formatted data for further analysis.
+   VirusTotal url links will also be exported for columns having hashes, domains or IPs.
 
 ## Ability to Start/Stop/Restart Polylogyx agent via Tray menu. 
    
 ![TrayNotificationConfig](Images/tray-notif-manage.png)
 
-    You can Start/Stop/Restart Polylogyx Agent services just by a click in Polylogyx Tray Icon menu options.
+   You can Start/Stop/Restart Polylogyx Agent services just by a click in Polylogyx Tray Icon menu options.
 
 ## Osquery service updated to version 4.5.0
 
@@ -138,21 +138,13 @@ The generated endpoint profile can be viewed as the HTML document.
    
 ## UI enhancements
 
-
-	- window maximize, minimize and resize allowed.
-	
-	- Shortcut keys for dialogs such as Ctrl+R to launch "Run Custom Query" dialog. 
-		
-	- selected row in list view is highlighted
-	
-	- View Row Data of list view on doubl click any row into a popup dialog (text in popup dialog can be copied by selecting text and Ctrl-C)
-	
-	- List view columns with hash, domain or IP are clickable links to VirusTotal page for reputation details. 
-
-	- Rebranding with EclecticIQ company logo
-	
-    - Show/Hide columns in list view on right click list view's top row having column names
-	
+- Window maximize, minimize and resize allowed.
+- Shortcut keys for dialogs such as Ctrl+R to launch "Run Custom Query" dialog. 
+- Selected row in list view is highlighted
+- View Row Data of list view on doubl click any row into a popup dialog (text in popup dialog can be copied by selecting text and Ctrl-C)
+- List view columns with hash, domain or IP are clickable links to VirusTotal page for reputation details. 
+- Rebranding with EclecticIQ company logo
+- Show/Hide columns in list view on right click list view's top row having column names
 ![ShowHideColumn](Images/hide-columns.png)
 
 
