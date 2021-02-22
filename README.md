@@ -83,17 +83,11 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ![EProfileOut](Images/mon-profile-htm.png)
 
-## Desktop Search 
-
-Integration with Everything tool (https://www.voidtools.com/) enables Desktop Search for files and their hashes.
-
-![DesktopSearch](Images/desktop-search-temp.PNG)
-
 # New features and enhancements over previous release
 
 ## Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
-   
-   <image>
+
+![DesktopSearch](Images/desktop-search-temp.png)
    
    You can click on Desktop Search tab and search for any files on the entire system (with regex support enabled by default). 
    With the help of Everything service, PolyMon will display all search results. 
@@ -101,95 +95,82 @@ Integration with Everything tool (https://www.voidtools.com/) enables Desktop Se
    These results can be exported into a csv file via Export button.	Just browse any location and provide file name, then click "Export".
 
 ## Search for IOCs - added support for searching IP address within Polylogyx event tables.
-   
-   <image> 	
+
+![IocSearchIP](Images/ioc-search-ip.png)   
    
    You can now search for any IP (or substring) which will display matches in Socket, SSL, DNS, DNS Response and HTTP events 
    in a single tab separated view.   
 
 ## Menu option to add/update VirusTotal key.
-   
-   <image>
-   
+
+![UpdateVtKey](Images/vt-key-update.png)   
+      
    If you didnt opt to add VirusTotal key while installing previous version, no worries. 
    It can be updated now and will be activated immediately to fetch file hash reputations in File Events.
 
 ## Save Custom Query with tags for future use. 
-   
-   <image>
+
+![SaveTags](Images/tags.png)
    
    Any custom query can be saved with a tag and will be displayed on the right side of the window. 
    You can double click any saved query and copy it to run again in future.
 
 ## Ability to export results in list view (csv format) with VirusTotal url links for hashes, domains, IPs. 
 	
-	<image>
-	
 	Any list view can be exported into a csv formatted data for further analysis.
 	VirusTotal url links will also be exported for columns having hashes, domains or IPs.
 
 ## Ability to Start/Stop/Restart Polylogyx agent via Tray menu. 
    
-   <image>
+![TrayNotificationConfig](Images/tray-notif-manage.png)
    
     You can Start/Stop/Restart Polylogyx Agent services just by a click in Polylogyx Tray Icon menu options.
 
 ## Osquery service updated to version 4.5.0
-   
-   <image>
 
 ## New tables added in osquery 4.5.0 added in dropdown list for "Other Tables"
 
-   <image>
-   
    All tables recently added by osquery (supported only on Windows) in 4.5.0 version have been updated in the list. 
 
 ## Endpoint Profile report enriched with host encryption and security status. 
 
-   <Image>	
+![EProfileOut](Images/mon-profile-htm.png)
    
 ## UI enhancements
 	- window maximize, minimize and resize allowed.
 	
 	- Shortcut keys for dialogs such as Ctrl+R to launch "Run Custom Query" dialog. 
 		
-		<image>
-		
 	- selected row in list view is highlighted
 	
-		<image>
-		
 	- View Row Data of list view on doubl click any row into a popup dialog (text in popup dialog can be copied by selecting text and Ctrl-C)
 	
-		<image>
-		
     - Show/Hide columns in list view on right click list view's top row having column names
 	
-		<image>
+![ShowHideColumn](Images/hide-columns.png)
 		
 	- List view columns with hash, domain or IP are clickable links to VirusTotal page for reputation details. 
 
-		<image>
-		
 	- Rebranding with EclecticIQ company logo
 
 # Uninstalling PolyMon
 
 PolyMon can be uninstalled by removing the software from 'Programs and Features' or "Add/Remove" menu of the Windows control panel. 
 
-![Uninstall](Images/unistnall-1.png)
+![Uninstall](Images/uninstall-1.png)
 
-![Uninstall2](Images/unistnall-2.png)
+![Uninstall2](Images/uninstall-2.png)
 
 ![Uninstall3](Images/uninstall-3.png)
 
 Note: During uninstall, PolyMon will stop Everything service. You can restart it running "sc start everything" from administrator command prompt. 
+Though the installer tries to cleanup all the files in case of failure, if it doesn't you can run polymon_cleanup.bat from command prompt with admin privileges to cleanup the installed files.
 
 # FAQ 
 
 Q: What is the osquery version bundled with PolyMon 
 
-Ans: The current release of PolyMon is bundled with osquery version 4.0.2 
+Ans: The current release of PolyMon is bundled with osquery version 4.5.0
 
 Q. What is the version of PolyLogyx Extension bundled with PolyMon 
 
