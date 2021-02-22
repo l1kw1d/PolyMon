@@ -4,7 +4,7 @@ PolyLogyx Monitoring Agent (PolyMon) is a Windows software that leverages the [o
 
 The software can be used for various threat monitoring and forensic purposes on a standalone system and does not mandate burden of having a server to manage the agents. It provides a graphical user interface that allows a user to navigate through the activities and events happening on the endpoint device.
 
-## Install
+## Install or Upgrade
 
 Download the **PolyMon_Setup.exe** or clone the repository. The software can be installed by right click and 'Run as Administrator' on the binary executable. The current version is supported only on Windows 10 x64 Platform.
 
@@ -15,6 +15,11 @@ Download the **PolyMon_Setup.exe** or clone the repository. The software can be 
 The setup wizard guides through the rest of the process.
 
 ![Installation_2](Images/install-wiz.png)
+
+You can choose to install Everything tool for Desktop Search feature (selected by default via checkbox).
+If you choose not to install Everything tool for Desktop Search feature, the "Desktop Search" feature will remain DISABLED and cannot be ENABLED later.
+
+![Installation_2.5](Images/install-desktop-search.png)
 
 The tool can be provisioned with an optional [VirusTotal](https://www.virustotal.com/) free API key. Provisioning with VirusTotal key allows the tool to fetch the reputation of file hashes automatically from it and alert in case a malicious (or supicious) detection.
 
@@ -78,6 +83,96 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ![EProfileOut](Images/mon-profile-htm.png)
 
+# Desktop Search 
+
+Integration with Everything tool (https://www.voidtools.com/) enables Desktop Search for files and their hashes.
+
+![DesktopSearch](Images/desktop-search-temp.png)
+
+## New features and enhancements over previous release
+
+# Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
+   
+   <image>
+   
+   You can click on Desktop Search tab and search for any files on the entire system (with regex support enabled by default). 
+   With the help of Everything service, PolyMon will display all search results. 
+   Further on clicking "Get File Hash", PolyMon will fetch the hashes of searched files and display alongwith file names.
+   These results can be exported into a csv file via Export button.	Just browse any location and provide file name, then click "Export".
+
+# Search for IOCs - added support for searching IP address within Polylogyx event tables.
+   
+   <image> 	
+   
+   You can now search for any IP (or substring) which will display matches in Socket, SSL, DNS, DNS Response and HTTP events 
+   in a single tab separated view.   
+
+# Menu option to add/update VirusTotal key.
+   
+   <image>
+   
+   If you didnt opt to add VirusTotal key while installing previous version, no worries. 
+   It can be updated now and will be activated immediately to fetch file hash reputations in File Events.
+
+# Save Custom Query with tags for future use. 
+   
+   <image>
+   
+   Any custom query can be saved with a tag and will be displayed on the right side of the window. 
+   You can double click any saved query and copy it to run again in future.
+
+# Ability to export results in list view (csv format) with VirusTotal url links for hashes, domains, IPs. 
+	
+	<image>
+	
+	Any list view can be exported into a csv formatted data for further analysis.
+	VirusTotal url links will also be exported for columns having hashes, domains or IPs.
+
+# Ability to Start/Stop/Restart Polylogyx agent via Tray menu. 
+   
+   <image>
+   
+    You can Start/Stop/Restart Polylogyx Agent services just by a click in Polylogyx Tray Icon menu options.
+
+# Osquery service updated to version 4.5.0
+   
+   <image>
+
+# New tables added in osquery 4.5.0.0 added in dropdown list for "Other Tables"
+
+   <image>
+   
+   All tables recently added by osquery (supported only on Windows) in 4.5.0 version have been updated in the list. 
+
+# Endpoint Profile report enriched with host encryption and security status. 
+
+   <Image>	
+   
+# UI enhancements
+	- window maximize, minimize and resize allowed.
+	
+	- Shortcut keys for dialogs such as Ctrl+R to launch "Run Custom Query" dialog. 
+		
+		<image>
+		
+	- selected row in list view is highlighted
+	
+		<image>
+		
+	- View Row Data of list view on doubl click any row into a popup dialog (text in popup dialog can be copied by selecting text and Ctrl-C)
+	
+		<image>
+		
+    - Show/Hide columns in list view on right click list view's top row having column names
+	
+		<image>
+		
+	- List view columns with hash, domain or IP are clickable links to VirusTotal page for reputation details. 
+
+		<image>
+		
+	- Rebranding with EclecticIQ company logo
+
 ## Uninstalling PolyMon
 
 PolyMon can be uninstalled by removing the software from 'Programs and Features' or "Add/Remove" menu of the Windows control panel. 
@@ -87,6 +182,8 @@ PolyMon can be uninstalled by removing the software from 'Programs and Features'
 ![Uninstall2](Images/unistnall-2.png)
 
 ![Uninstall3](Images/uninstall-3.png)
+
+Note: During uninstall, PolyMon will stop Everything service. You can restart it running "sc start everything" from administrator command prompt. 
 
 ## FAQ 
 
@@ -129,3 +226,8 @@ Ans: Easiest way would be to create an issue on github.
 Q. What is the license for using, or distributing, PolyMon?
 
 Ans. PolyMon is a freeware but licensed. All rights belong to EclecticIQ B.V. Please refer to the License file in the repository for detailed criteria. 
+
+Q. I already have Everything tool installed. Do I still need to select option to install Everything tool via PolyMon installer for Desktop Search?
+
+Ans: If Everything tool is already installed on your system while you are installing PolyMon, it will be ignored for enabling "Desktop Search".
+	 This means, to enable Desktop Search feature, you have to select checkbox to install Everything tool for Desktop Search feature.
