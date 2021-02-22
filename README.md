@@ -87,7 +87,7 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ## Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
 
-![DesktopSearch](Images/desktop-search-temp.png)
+![DesktopSearch](Images/desktop-search-temp.PNG)
    
    You can click on Desktop Search tab and search for any files on the entire system (with regex support enabled by default). 
    With the help of Everything service, PolyMon will display all search results. 
