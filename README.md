@@ -1,10 +1,10 @@
-## Introduction 
+# Introduction 
 
 PolyLogyx Monitoring Agent (PolyMon) is a Windows software that leverages the [osquery](https://osquery.io/) tool and the PolyLogyx Extension to osquery, to provide a view into detailed information about process creations, network connections, file system changes and many other activities on the system. For a detailed list of activities captured [check here](https://github.com/polylogyx/osq-ext-bin)
 
 The software can be used for various threat monitoring and forensic purposes on a standalone system and does not mandate burden of having a server to manage the agents. It provides a graphical user interface that allows a user to navigate through the activities and events happening on the endpoint device.
 
-## Install or Upgrade
+# Install or Upgrade
 
 Download the **PolyMon_Setup.exe** or clone the repository. The software can be installed by right click and 'Run as Administrator' on the binary executable. The current version is supported only on Windows 10 x64 Platform.
 
@@ -33,7 +33,7 @@ At the end of the installation, the monitoring agent registers as a tray app and
 
 ![Installation_6](Images/options_about.png)
 
-## Configuration
+# Configuration
 
 PolyMon is built with a default set of configurations for the underlying osquery agent as well as the [PolyLogyx Extension](https://github.com/polylogyx/osq-ext-bin). This provides an extremely low touch experience for the end user. The advanced users who wish to view/edit the configuration can do so by launching the PolyMon's front end application as shown below.
 
@@ -43,11 +43,11 @@ PolyMon configuration follows the similar syntax as provided for PolyLogyx Exten
 
 ![Configuration2](Images/mon-config2.png)
 
-## Use cases 
+# Use cases 
 
 PolyMon tool can be used for a variety of use cases.
 
-# Detection and monitoring
+## Detection and monitoring
 
 Under the hood, the PolyMon tool leverages a combination of technologies to record, query and display these activities. The most important use case is to provide a view into the activities of your system that are often not visible to naked eyes. These activities provide interesting insights for a system which can be used to root cause issues like a system breach, application misbehavior or any other unwarranted activity. Additionally, the tool can be utilized to query the properties of an endpoint. Each type of activity (or endpoint property) is provided under a tab that describes the type of activity. Each tab is a wrapper on a table provided by osquery core agent or PolyLogyx Extension. The default tabs are the 'activity monitoring' tabs. These activities include "File Events", "Process Events", "DNS Lookup", "HTTP Events" among others. The "search" box and the options on the right pane can assist with filtering the data for customizing the views.
 
@@ -67,13 +67,13 @@ The alert notifications can be turned off (or on) from the menu in the tray app.
 
 Please keep in the mind that PolyMon DOES NOT index the entire disk. File hashes for only those file events as configured in the 'Configuration' are captured in the PolyMon. For file hashes of already resident files, the 'query' option as shown in the next section can be utilized. 
 
-# Front-end for osquery 
+## Front-end for osquery 
 
 For the advanced osquery users, the tool can act as graphical front end (much like the osqueyi shell) and can be used to send custom SQL queries on various osquery tables. 
 
 ![TrayNotification](Images/mon-osquery2.png)
 
-# Endpoint Profiling 
+## Endpoint Profiling 
 
 A combination of osquery queries are clubbed together to generate an endpoint profile. These queries are listed below: 
 
@@ -83,15 +83,15 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ![EProfileOut](Images/mon-profile-htm.png)
 
-# Desktop Search 
+## Desktop Search 
 
 Integration with Everything tool (https://www.voidtools.com/) enables Desktop Search for files and their hashes.
 
 ![DesktopSearch](Images/desktop-search-temp.png)
 
-## New features and enhancements over previous release
+# New features and enhancements over previous release
 
-# Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
+## Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
    
    <image>
    
@@ -100,55 +100,55 @@ Integration with Everything tool (https://www.voidtools.com/) enables Desktop Se
    Further on clicking "Get File Hash", PolyMon will fetch the hashes of searched files and display alongwith file names.
    These results can be exported into a csv file via Export button.	Just browse any location and provide file name, then click "Export".
 
-# Search for IOCs - added support for searching IP address within Polylogyx event tables.
+## Search for IOCs - added support for searching IP address within Polylogyx event tables.
    
    <image> 	
    
    You can now search for any IP (or substring) which will display matches in Socket, SSL, DNS, DNS Response and HTTP events 
    in a single tab separated view.   
 
-# Menu option to add/update VirusTotal key.
+## Menu option to add/update VirusTotal key.
    
    <image>
    
    If you didnt opt to add VirusTotal key while installing previous version, no worries. 
    It can be updated now and will be activated immediately to fetch file hash reputations in File Events.
 
-# Save Custom Query with tags for future use. 
+## Save Custom Query with tags for future use. 
    
    <image>
    
    Any custom query can be saved with a tag and will be displayed on the right side of the window. 
    You can double click any saved query and copy it to run again in future.
 
-# Ability to export results in list view (csv format) with VirusTotal url links for hashes, domains, IPs. 
+## Ability to export results in list view (csv format) with VirusTotal url links for hashes, domains, IPs. 
 	
 	<image>
 	
 	Any list view can be exported into a csv formatted data for further analysis.
 	VirusTotal url links will also be exported for columns having hashes, domains or IPs.
 
-# Ability to Start/Stop/Restart Polylogyx agent via Tray menu. 
+## Ability to Start/Stop/Restart Polylogyx agent via Tray menu. 
    
    <image>
    
     You can Start/Stop/Restart Polylogyx Agent services just by a click in Polylogyx Tray Icon menu options.
 
-# Osquery service updated to version 4.5.0
+## Osquery service updated to version 4.5.0
    
    <image>
 
-# New tables added in osquery 4.5.0.0 added in dropdown list for "Other Tables"
+## New tables added in osquery 4.5.0 added in dropdown list for "Other Tables"
 
    <image>
    
    All tables recently added by osquery (supported only on Windows) in 4.5.0 version have been updated in the list. 
 
-# Endpoint Profile report enriched with host encryption and security status. 
+## Endpoint Profile report enriched with host encryption and security status. 
 
    <Image>	
    
-# UI enhancements
+## UI enhancements
 	- window maximize, minimize and resize allowed.
 	
 	- Shortcut keys for dialogs such as Ctrl+R to launch "Run Custom Query" dialog. 
@@ -173,7 +173,7 @@ Integration with Everything tool (https://www.voidtools.com/) enables Desktop Se
 		
 	- Rebranding with EclecticIQ company logo
 
-## Uninstalling PolyMon
+# Uninstalling PolyMon
 
 PolyMon can be uninstalled by removing the software from 'Programs and Features' or "Add/Remove" menu of the Windows control panel. 
 
@@ -185,7 +185,7 @@ PolyMon can be uninstalled by removing the software from 'Programs and Features'
 
 Note: During uninstall, PolyMon will stop Everything service. You can restart it running "sc start everything" from administrator command prompt. 
 
-## FAQ 
+# FAQ 
 
 Q: What is the osquery version bundled with PolyMon 
 
