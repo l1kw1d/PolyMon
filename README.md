@@ -87,7 +87,7 @@ The generated endpoint profile can be viewed as the HTML document.
 
 Integration with Everything tool (https://www.voidtools.com/) enables Desktop Search for files and their hashes.
 
-![DesktopSearch](Images/desktop-search-temp.png)
+![DesktopSearch](Images/desktop-search-temp.PNG)
 
 # New features and enhancements over previous release
 
