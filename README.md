@@ -4,7 +4,7 @@ PolyLogyx Monitoring Agent (PolyMon) is a Windows software that leverages the [o
 
 The software can be used for various threat monitoring and forensic purposes on a standalone system and does not mandate burden of having a server to manage the agents. It provides a graphical user interface that allows a user to navigate through the activities and events happening on the endpoint device.
 
-# Install or Upgrade
+# Installation (or Upgrade)
 
 Download the **PolyMon_Setup.exe** or clone the repository. The software can be installed by right click and 'Run as Administrator' on the binary executable. The current version is supported only on Windows 10 x64 Platform.
 
@@ -21,7 +21,7 @@ If you choose not to install Everything tool for Desktop Search feature, the "De
 
 ![Installation_2.5](Images/install-desktop-search.PNG)
 
-The tool can be provisioned with an optional [VirusTotal](https://www.virustotal.com/) free API key. Provisioning with VirusTotal key allows the tool to fetch the reputation of file hashes automatically from it and alert in case a malicious (or supicious) detection.
+The tool can be provisioned with an optional [VirusTotal](https://www.virustotal.com/) free API key. Provisioning with VirusTotal key allows the tool to fetch the reputation of file hashes automatically from it and alert in case a malicious (or supicious) detection. (available on Install only)
 
 ![Installation_3](Images/install-vt.png)
 
@@ -128,7 +128,11 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ## Osquery service updated to version 4.5.0
 
+   plgx_osqueryd.exe service, the osquery daemon shipped with PolyMon is now updated to version 4.5.0. 
+
 ## New tables added in osquery 4.5.0 added in dropdown list for "Other Tables"
+
+![OsqueryTableExample](Images/osquery-table.png)
 
    All tables recently added by osquery (supported only on Windows) in 4.5.0 version have been updated in the list. 
 
