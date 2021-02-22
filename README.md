@@ -128,6 +128,8 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ## Osquery service updated to version 4.5.0
 
+   plgx_osqueryd.exe service, the osquery daemon shipped with PolyMon is now updated to version 4.5.0. 
+
 ## New tables added in osquery 4.5.0 added in dropdown list for "Other Tables"
 
    All tables recently added by osquery (supported only on Windows) in 4.5.0 version have been updated in the list. 
