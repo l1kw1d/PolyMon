@@ -19,7 +19,7 @@ The setup wizard guides through the rest of the process.
 You can choose to install Everything tool for Desktop Search feature (selected by default via checkbox).
 If you choose not to install Everything tool for Desktop Search feature, the "Desktop Search" feature will remain DISABLED and cannot be ENABLED later.
 
-![Installation_2.5](Images/install-desktop-search.png)
+![Installation_2.5](Images/install-desktop-search.PNG)
 
 The tool can be provisioned with an optional [VirusTotal](https://www.virustotal.com/) free API key. Provisioning with VirusTotal key allows the tool to fetch the reputation of file hashes automatically from it and alert in case a malicious (or supicious) detection.
 
