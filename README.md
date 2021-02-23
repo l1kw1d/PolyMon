@@ -88,11 +88,14 @@ The generated endpoint profile can be viewed as the HTML document.
 ## Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
 
 ![DesktopSearch](Images/desktop-search-temp.PNG)
-   
-   You can click on Desktop Search tab and search for any files on the entire system (with regex support enabled by default). 
-   With the help of Everything service, PolyMon will display all search results. 
-   Further on clicking "Get File Hash", PolyMon will fetch the hashes of searched files and display alongwith file names.
-   These results can be exported into a csv file via Export button.	Just browse any location and provide file name, then click "Export".
+
+PolyMon 1.0.40.6 comes integrated with the powerful desktop search engine **[Everything](https://www.voidtools.com/)**. 
+This strengthens PolyMon's endpoint investigation capabilities. Everything search engine can be accessed via "Desktop Search" tab in the PolyMon UI.
+Using the similar syntax as that of Everything, desktop search can be accomplished. Additionally, on clicking "Get File Hash" button,
+PolyMon will fetch the hashes of searched files and display alongwith file names. These results can be exported into a csv file via Export button.
+Just browse any location and provide file name, then click "Export". This combined functionality enables being able to search for file based on hashes
+as well as names and folder locations. Everything tool is bundled with PolyMon and will get automatically installed. 
+This poses some bit of limitations if the Everything tool was installed outside of PolyMon. Please check the **FAQ** section to understand the known issues and limitations.
 
 ## Search for IOCs - added support for searching IP address within Polylogyx event tables.
 
