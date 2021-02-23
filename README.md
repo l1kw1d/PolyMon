@@ -142,7 +142,7 @@ The generated endpoint profile can be viewed as the HTML document.
    
 ## UI enhancements
 
-- Window maximize, minimize and resize allowed.
+- Window maximize, minimize and resize allowed. (minimum screen resolution: 1024x768)
 - Shortcut keys for dialogs such as Ctrl+R to launch "Run Custom Query" dialog. 
 - Selected row in list view is highlighted
 - View Row Data of list view on doubl click any row into a popup dialog (text in popup dialog can be copied by selecting text and Ctrl-C)
@@ -162,7 +162,7 @@ PolyMon can be uninstalled by removing the software from 'Programs and Features'
 
 ![Uninstall3](Images/uninstall-3.png)
 
-Note: During uninstall, PolyMon will stop Everything service. You can restart it running "sc start everything" from administrator command prompt. 
+Note: During uninstall, PolyMon will stop Everything service (and remove the service if Everything tool was installed with PolyMon).
 Though the installer tries to cleanup all the files in case of failure, if it doesn't you can run polymon_cleanup.bat from command prompt with admin privileges to cleanup the installed files.
 
 # FAQ 
@@ -211,3 +211,7 @@ Q. I already have Everything tool installed. Do I still need to select option to
 
 Ans: If Everything tool is already installed on your system while you are installing PolyMon, it will be ignored for enabling "Desktop Search".
 	 This means, to enable Desktop Search feature, you have to select checkbox to install Everything tool for Desktop Search feature.
+
+Q. What happens to Everything tool installed configuration if I have Everything tool installed and install Everything tool with PolyMon and then uninstall PolyMon?
+
+Ans: Since Everything tool was installed with PolyMon, Everything service will be removed on uninstall. Since Everything tool is already installed, the Everything service can be reinstalled from Everything UI options.
