@@ -215,6 +215,14 @@ Q. I already have Everything tool installed. Do I still need to select option to
 Ans: If Everything tool is already installed on your system while you are installing PolyMon, it will be ignored for enabling "Desktop Search".
 	 This means, to enable Desktop Search feature, you have to select checkbox to install Everything tool for Desktop Search feature.
 
-Q. What happens to Everything tool installed configuration if I have Everything tool installed and install Everything tool with PolyMon and then uninstall PolyMon?
+Q. What happens to Everything tool configuration if I have it already installed and again choose to install it with PolyMon for Desktop Search, and then uninstall PolyMon?
 
-Ans: Since Everything tool was installed with PolyMon, Everything service will be removed on uninstall. Since Everything tool is already installed, the Everything service can be reinstalled from Everything UI options.
+Ans: Since Everything tool was installed with PolyMon, Everything service will be removed on uninstall. But Everything service can be reinstalled from Everything tool UI options.
+
+Q. What happens if I choose to install Everything with PolyMon for Desktop Search, then install Everything tool via its installer (with option to create Everything service),
+and uninstall Everything tool via its installer or via "Add Remove Programs" control panel?
+
+Ans: Uninstalling Everything tool via its installer or via "Add Remove Programs" control panel may remove Everything service also and Desktop Search feature may not be usable. To continue working with Desktop Search feature, open command prompt with admin privileges in "C:\Program Files\plgx_osquery\Everything" directory and run:
+- Everything.exe -startup -admin
+- Everything.exe -install-service
+- Everything.exe -install-run-on-system-startup
