@@ -88,11 +88,14 @@ The generated endpoint profile can be viewed as the HTML document.
 ## Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
 
 ![DesktopSearch](Images/desktop-search-temp.PNG)
-   
-   You can click on Desktop Search tab and search for any files on the entire system (with regex support enabled by default). 
-   With the help of Everything service, PolyMon will display all search results. 
-   Further on clicking "Get File Hash", PolyMon will fetch the hashes of searched files and display alongwith file names.
-   These results can be exported into a csv file via Export button.	Just browse any location and provide file name, then click "Export".
+
+PolyMon 1.0.40.6 comes integrated with the powerful desktop search engine **[Everything](https://www.voidtools.com/)**. 
+This strengthens PolyMon's endpoint investigation capabilities. Everything search engine can be accessed via "Desktop Search" tab in the PolyMon UI.
+Using the similar syntax as that of Everything, desktop search can be accomplished. Additionally, on clicking "Get File Hash" button,
+PolyMon will fetch the hashes of searched files and display alongwith file names. These results can be exported into a csv file via Export button.
+Just browse any location and provide file name, then click "Export". This combined functionality enables being able to search for file based on hashes
+as well as names and folder locations. Everything tool is bundled with PolyMon and will get automatically installed. 
+This poses some bit of limitations if the Everything tool was installed outside of PolyMon. Please check the **FAQ** section to understand the known issues and limitations.
 
 ## Search for IOCs - added support for searching IP address within Polylogyx event tables.
 
@@ -142,7 +145,7 @@ The generated endpoint profile can be viewed as the HTML document.
    
 ## UI enhancements
 
-- Window maximize, minimize and resize allowed.
+- Window maximize, minimize and resize allowed. (minimum screen resolution: 1024x768)
 - Shortcut keys for dialogs such as Ctrl+R to launch "Run Custom Query" dialog. 
 - Selected row in list view is highlighted
 - View Row Data of list view on doubl click any row into a popup dialog (text in popup dialog can be copied by selecting text and Ctrl-C)
@@ -162,7 +165,7 @@ PolyMon can be uninstalled by removing the software from 'Programs and Features'
 
 ![Uninstall3](Images/uninstall-3.png)
 
-Note: During uninstall, PolyMon will stop Everything service. You can restart it running "sc start everything" from administrator command prompt. 
+Note: During uninstall, PolyMon will stop Everything service (and remove the service if Everything tool was installed with PolyMon).
 Though the installer tries to cleanup all the files in case of failure, if it doesn't you can run polymon_cleanup.bat from command prompt with admin privileges to cleanup the installed files.
 
 # FAQ 
@@ -211,3 +214,15 @@ Q. I already have Everything tool installed. Do I still need to select option to
 
 Ans: If Everything tool is already installed on your system while you are installing PolyMon, it will be ignored for enabling "Desktop Search".
 	 This means, to enable Desktop Search feature, you have to select checkbox to install Everything tool for Desktop Search feature.
+
+Q. What happens to Everything tool configuration if I have it already installed and again choose to install it with PolyMon for Desktop Search, and then uninstall PolyMon?
+
+Ans: Since Everything tool was installed with PolyMon, Everything service will be removed on uninstall. But Everything service can be reinstalled from Everything tool UI options.
+
+Q. What happens to Desktop Search feature if I choose to install Everything with PolyMon for Desktop Search, then install Everything tool via its installer, and uninstall
+Everything tool via its installer or via "Add Remove Programs" control panel?
+
+Ans: Uninstalling Everything tool via its installer or via "Add Remove Programs" control panel may remove Everything service also and Desktop Search feature may not be usable. To continue working with Desktop Search feature, open command prompt with admin privileges in "C:\Program Files\plgx_osquery\Everything" directory and run:
+- Everything.exe -startup -admin
+- Everything.exe -install-service
+- Everything.exe -install-run-on-system-startup
