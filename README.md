@@ -219,8 +219,8 @@ Q. What happens to Everything tool configuration if I have it already installed 
 
 Ans: Since Everything tool was installed with PolyMon, Everything service will be removed on uninstall. But Everything service can be reinstalled from Everything tool UI options.
 
-Q. What happens if I choose to install Everything with PolyMon for Desktop Search, then install Everything tool via its installer (with option to create Everything service),
-and uninstall Everything tool via its installer or via "Add Remove Programs" control panel?
+Q. What happens to Desktop Search feature if I choose to install Everything with PolyMon for Desktop Search, then install Everything tool via its installer, and uninstall
+Everything tool via its installer or via "Add Remove Programs" control panel?
 
 Ans: Uninstalling Everything tool via its installer or via "Add Remove Programs" control panel may remove Everything service also and Desktop Search feature may not be usable. To continue working with Desktop Search feature, open command prompt with admin privileges in "C:\Program Files\plgx_osquery\Everything" directory and run:
 - Everything.exe -startup -admin
